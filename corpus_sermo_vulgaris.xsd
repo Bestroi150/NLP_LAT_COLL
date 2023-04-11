@@ -1,0 +1,143 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TEI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="teiCorpus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="teiHeader">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fileDesc">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="titleStmt">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="title"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="publicationStmt">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="p"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="sourceDesc">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="p"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="text">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="body">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="div">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="list">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="w">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="form" minOccurs="0">
+                                                    <xs:complexType mixed="true">
+                                                      <xs:sequence>
+                                                        <xs:element name="relation" maxOccurs="unbounded" minOccurs="0">
+                                                          <xs:complexType>
+                                                            <xs:simpleContent>
+                                                              <xs:extension base="xs:string">
+                                                                <xs:attribute type="xs:string" name="type" use="optional"/>
+                                                                <xs:attribute type="xs:string" name="target" use="optional"/>
+                                                                <xs:attribute type="xs:string" name="source" use="optional"/>
+                                                              </xs:extension>
+                                                            </xs:simpleContent>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                      <xs:attribute type="xs:string" name="aspect" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="mood" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="number" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="person" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="tense" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="verbForm" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="voice" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="case" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="gender" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="adpositionalType" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="Possessive" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="prononimalType" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="Reflexive" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="degree" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="VerbType" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="Numeral" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="NumForm" use="optional"/>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="pron" minOccurs="0">
+                                                    <xs:complexType mixed="true">
+                                                      <xs:sequence>
+                                                        <xs:element name="relation">
+                                                          <xs:complexType>
+                                                            <xs:simpleContent>
+                                                              <xs:extension base="xs:string">
+                                                                <xs:attribute type="xs:string" name="type" use="optional"/>
+                                                                <xs:attribute type="xs:string" name="target" use="optional"/>
+                                                              </xs:extension>
+                                                            </xs:simpleContent>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                      <xs:attribute type="xs:string" name="case" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="gender" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="number" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="prononimalType" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="person" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="Possessive" use="optional"/>
+                                                      <xs:attribute type="xs:string" name="Reflexive" use="optional"/>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="pos" use="optional"/>
+                                                <xs:attribute type="xs:string" name="lemma" use="optional"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="type"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
