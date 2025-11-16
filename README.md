@@ -90,7 +90,7 @@ If you use this corpus in academic work, please cite:
 @dataset{nlp_lat_coll,
   title={NLP Latin Collection: Satyricon Corpus},
   author={Kristiyan Simeonov},
-  year={2025},
+  year={2023},
   url={https://github.com/Bestroi150/NLP_LAT_COLL}
 }
 ```
